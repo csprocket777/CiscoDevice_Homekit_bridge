@@ -34,7 +34,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@hr-tm-cms-git.cisco.com:collaboration_device_macros/ciscodevice_homekit_bridge.git"
+    "url": "git@github.com:csprocket777/CiscoDevice_Homekit_bridge.git"
   },
   "bugs": {
     "url": "https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/-/issues"
