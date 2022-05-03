@@ -32,10 +32,7 @@
     "dist",
     "source"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:csprocket777/CiscoDevice_Homekit_bridge.git"
-  },
+  "repository": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge.git",
   "bugs": {
     "url": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge/issues"
   },
