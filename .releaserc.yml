@@ -15,7 +15,7 @@ verifyConditions:
   - '@semantic-release/git'
   - '@semantic-release/npm'
   - '@semantic-release/gitlab'
-  - '@eclass/semantic-release-sentry-releases'
+  # - '@eclass/semantic-release-sentry-releases'
 
 # Responsible for determining the type of the next release (major, minor or patch).
 # If multiple plugins with a analyzeCommits step are defined, the release type will be
