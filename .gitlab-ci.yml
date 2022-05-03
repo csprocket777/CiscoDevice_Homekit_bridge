@@ -1,0 +1,252 @@
+stages:
+  # - test
+  - version
+  # - deploy_pages
+  # - release
+  # - object-enforce
+  # - release
+  - build
+  # - containerize
+  # - review
+  # - deploy
+
+
+variables:
+  NPM_TOKEN: ${CI_JOB_TOKEN}
+  project_name: CiscoDevice_Homekit_bridge
+
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: never
+    - if: $CI_COMMIT_MESSAGE =~ /skip ci/
+      when: never
+    - when: always 
+
+# Cache modules in between jobs
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  untracked: true
+  paths:
+    - .yarn/
+    - node_modules/
+
+
+
+# test:
+#   image: containers.cisco.com/chshipma/ember-test-container-with-node-chrome:node16
+#   stage: test
+#   script:
+#     - yarn install
+#   tags:
+#     - openshift
+#   rules:
+#     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+#       when: never
+#     - if: '$CI_COMMIT_BRANCH == "master"'
+#       when: on_success
+#     - when: never
+
+
+
+version:
+  stage: version
+  image: containers.cisco.com/chshipma/ember-build-container:latest
+  script:
+    - yarn install
+    - npm config set -- '//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken' "${CI_JOB_TOKEN}"
+    - npm ci --cache .npm --prefer-offline
+    - |
+      {
+        echo "@${CI_PROJECT_ROOT_NAMESPACE}:registry=${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/npm/"
+        echo "${CI_API_V4_URL#https?}/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=\${CI_JOB_TOKEN}"
+      } | tee --append .npmrc
+    - npm run semantic-release
+    - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">.npmrc
+    - npm publish
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - .yarn/
+      - .npm/
+  tags:
+    - openshift
+  only:
+    - master
+  allow_failure: true
+
+
+
+
+
+.openshift-setup:
+  image: containers.cisco.com/chshipma/gitlab-ci-oc-deploy
+  before_script:
+    - echo "===== LOGGING INTO OPENSHIFT ======="
+    - oc login $OC_URL --token=$OC_TOKEN --insecure-skip-tls-verify
+    - oc project $OC_NAMESPACE
+  tags:
+    - openshift
+
+
+
+# object-enforce-dev:
+#   extends: .openshift-setup
+#   stage: object-enforce
+#   script:
+#     # - oc apply --filename=./.openshift/dev/route.yml --recursive=true --wait=true
+#     # - oc apply --filename=./.openshift/dev/dc.yml --recursive=true --wait=true
+#     # - oc apply --filename=./.openshift/dev/svc.yml --recursive=true --wait=true
+#   rules:
+#     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+#       when: on_success
+#     - when: never
+
+
+
+# object-enforce-prod:
+#   extends: .openshift-setup
+#   stage: object-enforce
+#   script:
+#     # - oc apply --filename=./.openshift/prod/route.yml --recursive=true --wait=true
+#     # - oc apply --filename=./.openshift/prod/dc.yml --recursive=true --wait=true
+#     # - oc apply --filename=./.openshift/prod/svc.yml --recursive=true --wait=true
+#   rules:
+#     - if: '$CI_COMMIT_BRANCH == "master"'
+#       when: on_success
+#     - when: never
+
+
+
+# development-setup:
+#   extends: .openshift-setup
+#   stage: object-enforce
+#   cache:
+#     policy: pull
+#   script: 
+#     # - oc set env dc/${project_name}-dev --overwrite ENVIRONMENT=development
+#     # - oc process -f .openshift/dev/build.yml -p CI_MERGE_REQUEST_IID=${CI_MERGE_REQUEST_IID} | oc apply -f-
+#   tags:
+#     - openshift
+#   only:
+#     - merge_requests
+
+
+
+# production-setup:
+#   extends: .openshift-setup
+#   stage: object-enforce
+#   cache:
+#     policy: pull
+#   script: 
+#     # - oc set env dc/${project_name} --overwrite ENVIRONMENT=production
+#     # - oc process -f .openshift/prod/build.yml | oc apply -f-
+#   tags:
+#     - openshift
+#   only:
+#     - master
+      
+
+build:
+  image: containers.cisco.com/chshipma/ember-build-container
+  stage: build
+  variables:
+    GIT_COMMITTER_NAME: "gitlab-runner-user"
+    GIT_COMMITTER_EMAIL: "gitlab-runner-user@cisco.com"
+  script:
+    - yarn install
+    - yarn run build
+  artifacts:
+    paths:
+      - dist/
+  tags:
+    - openshift
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: on_success
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      when: on_success
+    - when: never
+
+
+
+# container-build:
+#   extends: .openshift-setup
+#   stage: containerize
+#   dependencies:
+#     - build
+#   script: 
+#     # - |
+#     #   if [ "$CI_COMMIT_REF_NAME" == "master" ]; then
+#     #     oc set env dc/${project_name} --overwrite ENVIRONMENT=production
+#     #     oc start-build ${project_name} --from-dir=. --follow
+#     #   else
+#     #     oc set env dc/${project_name}-dev --overwrite ENVIRONMENT=development
+#     #     oc start-build ${project_name}-dev --from-dir=. --follow
+#     #   fi
+#   tags:
+#     - openshift
+#   rules:
+#     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+#       when: on_success
+#     - if: '$CI_COMMIT_BRANCH == "master"'
+#       when: on_success
+#     - when: never
+
+
+
+# deploy-application:
+#   extends: .openshift-setup
+#   stage: deploy
+#   environment:
+#     name: Production
+#     url: https://${project_name}.cisco.com
+#   script:
+#     # - |
+#     #   if [ "$CI_COMMIT_REF_NAME" == "master" ]; then
+#     #     oc rollout latest dc/${project_name}
+#     #     oc set env dc/${project_name} --overwrite ENVIRONMENT=production
+#     #   else
+#     #     oc rollout latest dc/${project_name}-dev
+#     #     oc set env dc/${project_name}-dev --overwrite ENVIRONMENT=development
+#     #   fi
+#   rules:
+#     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+#       when: never
+#     - if: '$CI_COMMIT_BRANCH == "master"'
+#       when: on_success
+#     - when: never
+
+
+# review-start:
+#   extends: .openshift-setup
+#   stage: review
+#   environment:
+#     name: review/$CI_COMMIT_REF_NAME-$CI_MERGE_REQUEST_IID
+#     url: https://${project_name}-${CI_MERGE_REQUEST_IID}.cisco.com
+#   cache:
+#     policy: pull
+#   script:
+#     # - oc process -f .openshift/review/review.yml -p CI_MERGE_REQUEST_IID=${CI_MERGE_REQUEST_IID} | oc apply -f-
+#     # - oc process -f .openshift/review/route.yml -p CI_MERGE_REQUEST_IID=${CI_MERGE_REQUEST_IID} | oc apply -f-
+#   only:
+#     - merge_requests
+
+
+
+# review-stop:
+#   extends: .openshift-setup
+#   stage: review
+#   environment:
+#     name: review/$CI_COMMIT_REF_NAME
+#     url: https://${project_name}-${CI_MERGE_REQUEST_IID}.cisco.com
+#   when: manual
+#   dependencies: []
+#   cache:
+#     policy: pull
+#   allow_failure: false
+#   script:
+#     # - oc delete all --selector review-app-id=${CI_MERGE_REQUEST_IID}
+#   only:
+#     - merge_requests
