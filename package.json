@@ -45,7 +45,7 @@
     "homebridge": "^1.0.4",
     "nodemon": "^2.0.16",
     "rimraf": "^3.0.2",
-    "typescript": "^3.8.3"
+    "typescript": "^4.6.4"
   },
   "dependencies": {
     "@eclass/semantic-release-sentry-releases": "^2.9.0",

@@ -230,7 +230,7 @@ class CiscoCollabDeviceHomekitAccessory implements AccessoryPlugin {
 
   getDeviceSerialNumber(callback:any): any {
     this.getValueFromDevice('SystemUnit.Hardware.Module.SerialNumber').then(result=>{
-      callback(null, result.toString())
+      callback(null, result)
     });
   }
 
