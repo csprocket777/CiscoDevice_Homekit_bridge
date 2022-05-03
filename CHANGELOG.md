@@ -1,3 +1,10 @@
+### [1.0.2](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.1...v1.0.2) (2022-05-03)
+
+
+### Bug Fixes
+
+* **ci:** remove the `@` scoping… ([9d61866](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/9d61866e0e21efc1fc9c06ee75b3f8dcf5c8ff24))
+
 ### [1.0.1](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.0...v1.0.1) (2022-05-03)
 
 
