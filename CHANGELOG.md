@@ -1,3 +1,11 @@
+### [1.0.1](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.0...v1.0.1) (2022-05-03)
+
+
+### Bug Fixes
+
+* **ci:** allow npm to run the installs in the package-lock.json file ([92f05b0](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/92f05b03e7a0c495f48924da9eda8b157c4df6ae))
+* **ci:** Update typescript to version 4.6.4 ([e9a10cf](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/e9a10cf7a82e776ad6703abcb9d025eb0b0e165f))
+
 ## [1.0.0](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/...v1.0.0) (2022-05-03)
 
 
