@@ -13,6 +13,7 @@ gitlabUrl: 'https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodev
 verifyConditions:
   - '@semantic-release/changelog'
   - '@semantic-release/git'
+  - '@semantic-release/npm'
   - '@semantic-release/gitlab'
   - '@eclass/semantic-release-sentry-releases'
 
@@ -48,6 +49,7 @@ prepare:
 # Responsible for publishing the release.
 publish:
   - path: '@semantic-release/gitlab'
+  - path: '@semantic-release/npm'
 # TODO: The semantic-release-sentry-releases tool is currently throwing an error when publishing to sentry, bug is being fixed by their team.
 # TODO: In the mean time we can manually upload sentry via deploy.sh file.
 #  - path: '@eclass/semantic-release-sentry-releases'
