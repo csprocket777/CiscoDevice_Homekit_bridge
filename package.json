@@ -4,7 +4,7 @@
   "description": "A device bridge for Apple's Homekit framework (via Homebridge.io) supporting Cisco Collaboration devices.",
   "main": "dist/index.js",
   "publishConfig": {
-    "@collaboration_device_macros:registry": " https://hr-tm-cms-git.cisco.com/api/v4/projects/122/packages/npm/",
+    "@collaboration_device_macros:registry": "https://hr-tm-cms-git.cisco.com/api/v4/projects/122/packages/npm/",
     "access": "public"
   },
   "homepage": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge",
