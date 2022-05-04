@@ -33,8 +33,7 @@
   "license": "ISC",
   "files": [
     "LICENSE",
-    "dist",
-    "source",
+    "dist/",
     "config.schema.json"
   ],
   "repository": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge.git",
