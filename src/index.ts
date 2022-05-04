@@ -48,6 +48,8 @@ class CiscoCollabDeviceHomekitAccessory implements AccessoryPlugin {
     this.name = config.name;
     this.accessoryConfig = config;
 
+    this.validateConfig(config);
+
     this.informationService = new hap.Service.AccessoryInformation().setCharacteristic( hap.Characteristic.Manufacturer, "Cisco Systems, Inc.")
     this.informationService.getCharacteristic( hap.Characteristic.Model ).on('get', this.getDeviceModel.bind(this));
     this.informationService.getCharacteristic( hap.Characteristic.FirmwareRevision ).on('get', this.getDeviceFirmware.bind(this));
@@ -72,6 +74,28 @@ class CiscoCollabDeviceHomekitAccessory implements AccessoryPlugin {
                             .on('set', this.handleCurrentMicrophoneMuteSet.bind(this));
 
     this.log.info(`Finished initializing`)
+  }
+
+  validateConfig(configuration:CiscoDevicePluginConfig){
+    let isValid:Boolean = false;
+
+    let validConfigSchema:string[] = ["accessory","name","deviceIP","deviceUsername","devicePassword"];
+    let missingConfigKeys:string[] = [];
+
+    let currentConfigKeys:string[] = Object.keys(configuration)
+
+    validConfigSchema.forEach(key => {
+      if( currentConfigKeys.includes(key) === false ){
+        missingConfigKeys.push(key);
+      }
+    })
+
+    isValid = missingConfigKeys.length === 0;
+    if( !isValid ){
+      this.log.error(`Your configuration is missing some entries: ${missingConfigKeys.join(', ')}`)
+    }
+
+    return isValid;
   }
 
   /**
