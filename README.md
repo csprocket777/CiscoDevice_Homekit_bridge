@@ -1,5 +1,14 @@
 # CiscoDevice_Homekit_bridge
 
+# Features
+This plugin allows your Cisco Collaboration Device to surface some of it's internal sensors in Homekit for use in home automation. *(Only on devices that have these sensors to be exposed, such as the DeskPro)*
+
+**Available Sensors:**
+- Temperature
+- Humidity
+- Motion
+- Occupancy
+
 ## Configuration
 In order for this plugin to connect with your Cisco Webex Collaboration device, you need to have it in "Personal Mode", see instructions [here](https://roomos.cisco.com/docs/LocalAdminUser.md).
 
