@@ -1,0 +1,33 @@
+{
+    "pluginAlias": "homebridge-cisco-collaboration-devices",
+    "pluginType": "accessory",
+    "footerDisplay": "Generating a Client ID & Secret: [Airthings Dashboard](https://dashboard.airthings.com) -> Integrations -> Request API Client",
+    "singular": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string",
+          "required": true,
+          "default": "Webex Collaboration Device"
+        },
+        "deviceIP": {
+          "title": "Device IP Address",
+          "type": "string",
+          "required": true,
+          "placeholder": "10.0.2.2"
+        },
+        "deviceUsername": {
+          "title": "Device Username",
+          "type": "string",
+          "required": true
+        },
+        "devicePassword": {
+          "title": "Device Password",
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  }
