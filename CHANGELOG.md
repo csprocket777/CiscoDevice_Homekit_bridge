@@ -1,3 +1,10 @@
+### [1.0.8](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.7...v1.0.8) (2022-05-04)
+
+
+### Bug Fixes
+
+* **publishing:** move the text manipulation stuff into the publish command for github. ([5eb657b](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/5eb657b763ecddc5f6e8758070d7f94239de6989))
+
 ### [1.0.7](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.6...v1.0.7) (2022-05-04)
 
 
