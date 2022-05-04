@@ -1,3 +1,31 @@
+### [1.0.3](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.2...v1.0.3) (2022-05-04)
+
+
+### Bug Fixes
+
+* **ci:** change the publish order making gitlab happen before npm ([86b611d](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/86b611da3084a888a580a0fc428f780e86988e3f))
+* **CI:** force new tag version ([5815e70](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/5815e7098cdd34c0944d67c0e19a98b86fec53b9))
+* **ci:** include a github publish ([e296f49](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/e296f49beda9f24b4dc4c975f5fa4bbd41f34277))
+* **ci:** remove the github publish step and rely on the npm publish ([88fa4f6](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/88fa4f6d472fc8b3fab50000af5159d621cefb06))
+* **configuration:** Enhance the plugin’s configuration experience with a UI ([13336e4](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/13336e446a7ed15d00273cc3f4c114b78cf73f7c))
+* **deployment:** Change repo url to the Github url ([5d000aa](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/5d000aa76ccbd8e8c43101a3aa9ba96eb73115f5))
+* **documentation:** Convey which sensors are surfaced in homekit ([33417d0](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/33417d0e69d72fd125d2eeac801c16aeae5f084c))
+* **general:** Add some details to the readme file about device and plugin configuration ([0a2adf6](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/0a2adf6e32ec42ada36afa8bcdb2eb5159dcf551))
+* **general:** Correct the package-lock.json file version number ([0748e15](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/0748e15133e138472b31cfc26119601ae1914690))
+* **general:** Do some configuration validation and error reporting ([5b3847f](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/5b3847f5ef722a00179d64d6941ddbed0e266b1b))
+* **general:** Include some keywords and an enhanced config UI ([30825c3](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/30825c3f99e9316c4f279d30312509d207c0bbe9))
+* **general:** trigger new build ([66cf8ed](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/66cf8ed025646145fe17dd8c65d72cdaa0a1c21d))
+* **github:** Change the event trigger to ‘push’ ([c28589c](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/c28589c027b4c3008bbd80a3659685215533b3a8))
+* **publish:** adjust the package.json `files` entry to solve for a gitlab publish error ([9f798a3](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/9f798a3f2e9d634a9337999e31cf2c22845c506d))
+* **publish:** Ensure there is a properly configured .npmrc file ([134a38f](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/134a38feeb14166d18cdd3c9f234e88a0585a94b))
+* **publishing:** Add some keywords and a `config.schema.json` file ([b8eec34](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/b8eec344099137b3bcbe38e815c081edd6352db2))
+* **publishing:** Change the repo from Gitlab to Github ([d1b62ed](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/d1b62ed5c23f33af2ecf7ca3dfd57f96d5b10cb8))
+* **publishing:** Change the repository entry of the package.json file to the internal repo ([7d4bcd3](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/7d4bcd3708959d8eb06370ede96acd9cc12bd755))
+* **publishing:** massage the npm publish and github actions further ([bfd2d9a](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/bfd2d9ac9e1c15844185a2a8caa26e5ec66c1f4a))
+* **publishing:** Reinstate the github deployment and include a github workflow ([8c6a8e9](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/8c6a8e9c3404cdf2815a7bdb22afeedb9c325b36))
+* **publishing:** Remove github semantic-release step in favor of push-mirroring ([a03fa28](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/a03fa2830e957f221986a4cdcf18233a6886b921))
+* **versioning:** Fix the version in package.json ([60bde7b](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/60bde7b2f0849a90a8ac24911ae97204180f810e))
+
 ### [1.0.3](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/compare/v1.0.2...v1.0.3) (2022-05-04)
 
 
