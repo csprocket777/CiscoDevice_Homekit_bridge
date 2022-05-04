@@ -1,3 +1,10 @@
+### [1.0.5](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.4...v1.0.5) (2022-05-04)
+
+
+### Bug Fixes
+
+* **publishing:** make the npm_publish_switch.sh script work for both OsX and linux ([47b73c3](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/47b73c3e6f7663c97f63bdad3d90e2c8e2f2a967))
+
 ### [1.0.4](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.3...v1.0.4) (2022-05-04)
 
 
