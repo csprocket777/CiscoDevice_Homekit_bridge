@@ -1,3 +1,11 @@
+### [1.0.2](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/compare/v1.0.1...v1.0.2) (2022-05-04)
+
+
+### Bug Fixes
+
+* **documentation:** Convey which sensors are surfaced in homekit ([33417d0](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/commit/33417d0e69d72fd125d2eeac801c16aeae5f084c))
+* **versioning:** Fix the version in package.json ([60bde7b](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/commit/60bde7b2f0849a90a8ac24911ae97204180f810e))
+
 ### [1.0.1](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/compare/v1.0.0...v1.0.1) (2022-05-04)
 
 
