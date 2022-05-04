@@ -3,6 +3,7 @@
 filename="package.json"
 SEDOPTION=
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "HERE";
   SEDOPTION="-i ''"
 fi
 # if [[ "$OSTYPE" == "darwin"* ]]; then 
