@@ -1,3 +1,13 @@
+### [1.0.1](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/compare/v1.0.0...v1.0.1) (2022-05-04)
+
+
+### Bug Fixes
+
+* **ci:** include a github publish ([e296f49](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/commit/e296f49beda9f24b4dc4c975f5fa4bbd41f34277))
+* **deployment:** Change repo url to the Github url ([5d000aa](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/commit/5d000aa76ccbd8e8c43101a3aa9ba96eb73115f5))
+* **general:** Add some details to the readme file about device and plugin configuration ([0a2adf6](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/commit/0a2adf6e32ec42ada36afa8bcdb2eb5159dcf551))
+* **general:** Do some configuration validation and error reporting ([5b3847f](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/commit/5b3847f5ef722a00179d64d6941ddbed0e266b1b))
+
 ## [1.0.0](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/compare/...v1.0.0) (2022-05-03)
 
 
