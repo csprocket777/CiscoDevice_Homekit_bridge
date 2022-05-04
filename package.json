@@ -20,7 +20,11 @@
     "semantic-release": "semantic-release"
   },
   "keywords": [
-    "homebridge-plugin"
+    "homebridge-plugin",
+    "cisco",
+    "webex",
+    "collaboration",
+    "hybrid-work"
   ],
   "author": "Chuck Shipman <chshipma@cisco.com>",
   "engines": {
@@ -30,7 +34,8 @@
   "files": [
     "LICENSE",
     "dist",
-    "source"
+    "source",
+    "config.schema.json"
   ],
   "repository": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge.git",
   "bugs": {
