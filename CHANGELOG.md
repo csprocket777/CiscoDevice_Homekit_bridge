@@ -1,3 +1,10 @@
+### [1.0.6](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.5...v1.0.6) (2022-05-04)
+
+
+### Bug Fixes
+
+* **publishing:** swap to using CI varaibles in the .npmrc file ([f6c48b5](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/f6c48b525a5d5732528765c2c0e089a86b89f461))
+
 ### [1.0.5](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.4...v1.0.5) (2022-05-04)
 
 
