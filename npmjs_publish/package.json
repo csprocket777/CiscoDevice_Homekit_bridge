@@ -1,0 +1,66 @@
+{
+  "name": "homebridge-cisco-collaboration-devices",
+  "version": "1.0.10",
+  "description": "A device bridge for Apple's Homekit framework (via Homebridge.io) supporting Cisco Collaboration devices.",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "homepage": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "rimraf ./dist && tsc",
+    "prepublishOnly": "if-env PUBLISH_DEST=npmjs && npm run prepublishOnlyNpm || npm run prepublishOnlyGitlab",
+    "prepublishOnlyNpm": "./npm_publish_switch.sh && rm .npmrc && echo 'registry:https://registry.npmjs.org/' > .npmrc && cat .npmrc && cat package.json && npm run build",
+    "prepublishOnlyGitlab": "npm run build",
+    "postpublish": "npm run clean",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc && concurrently \"tsc -w\" \"nodemon dist/index.js\"",
+    "start": "tsc && node dist/main.js",
+    "watch-and-run": "tsc -w & nodemon -q -w dist dist/index.js",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "cisco",
+    "webex",
+    "collaboration",
+    "hybrid-work"
+  ],
+  "author": "Chuck Shipman <chshipma@cisco.com>",
+  "engines": {
+    "homebridge": ">=1.0.0"
+  },
+  "license": "ISC",
+  "files": [
+    "LICENSE",
+    "dist/",
+    "config.schema.json"
+  ],
+  "repository": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge.git",
+  "bugs": {
+    "url": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge/issues"
+  },
+  "devDependencies": {
+    "@semantic-release/github": "^8.0.4",
+    "@types/node": "10.17.19",
+    "concurrently": "^7.1.0",
+    "homebridge": "^1.0.4",
+    "nodemon": "^2.0.16",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/gitlab": "^9.2.0",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "conventional-changelog-conventionalcommits": "^4.6.0",
+    "if-env": "^1.0.4",
+    "jsxapi": "^5.1.1",
+    "semantic-release": "^19.0.2"
+  }
+}
