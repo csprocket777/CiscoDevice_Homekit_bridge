@@ -25,6 +25,8 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: ./npmjs_publish_filemove.sh && PUBLISH_DEST=npmjs npm publish ./npmjs_publish
+      - run: npm run build
+      - run: ./npmjs_publish_filemove.sh
+      - run: PUBLISH_DEST=npmjs npm publish ./npmjs_publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
