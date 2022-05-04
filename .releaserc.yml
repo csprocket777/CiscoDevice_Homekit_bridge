@@ -15,7 +15,6 @@ verifyConditions:
   - '@semantic-release/git'
   - '@semantic-release/npm'
   - '@semantic-release/gitlab'
-  - '@semantic-release/github'
   # - '@eclass/semantic-release-sentry-releases'
 
 # Responsible for determining the type of the next release (major, minor or patch).
@@ -51,7 +50,6 @@ prepare:
 publish:
   - path: '@semantic-release/gitlab'
   - path: '@semantic-release/npm'
-  - path: '@semantic-release/github'
 # TODO: The semantic-release-sentry-releases tool is currently throwing an error when publishing to sentry, bug is being fixed by their team.
 # TODO: In the mean time we can manually upload sentry via deploy.sh file.
 #  - path: '@eclass/semantic-release-sentry-releases'
