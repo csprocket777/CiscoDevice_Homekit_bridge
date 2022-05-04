@@ -1,3 +1,10 @@
+### [1.0.3](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/compare/v1.0.2...v1.0.3) (2022-05-04)
+
+
+### Bug Fixes
+
+* **general:** trigger new build ([66cf8ed](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/commit/66cf8ed025646145fe17dd8c65d72cdaa0a1c21d))
+
 ### [1.0.2](https://github.com/csprocket777/CiscoDevice_Homekit_bridge/compare/v1.0.1...v1.0.2) (2022-05-04)
 
 
