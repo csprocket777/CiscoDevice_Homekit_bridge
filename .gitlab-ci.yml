@@ -64,7 +64,7 @@ version:
       } | tee --append .npmrc
     - npm run semantic-release
     - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">.npmrc
-    - npm publish
+    - npm publish --loglevel verbose
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     paths:
