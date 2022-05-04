@@ -48,8 +48,8 @@ prepare:
 
 # Responsible for publishing the release.
 publish:
-  - path: '@semantic-release/npm'
   - path: '@semantic-release/gitlab'
+  - path: '@semantic-release/npm'
 # TODO: The semantic-release-sentry-releases tool is currently throwing an error when publishing to sentry, bug is being fixed by their team.
 # TODO: In the mean time we can manually upload sentry via deploy.sh file.
 #  - path: '@eclass/semantic-release-sentry-releases'
