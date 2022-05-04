@@ -1,6 +1,6 @@
 {
   "name": "@collaboration_device_macros/homebridge-cisco-collaboration-devices",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A device bridge for Apple's Homekit framework (via Homebridge.io) supporting Cisco Collaboration devices.",
   "main": "dist/index.js",
   "publishConfig": {
