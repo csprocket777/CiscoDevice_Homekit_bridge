@@ -12,7 +12,7 @@
       "clean": "rimraf ./dist",
       "build": "rimraf ./dist && tsc",
       "prepublishOnly": "if-env PUBLISH_DEST=npmjs && npm run prepublishOnlyNpm || npm run prepublishOnlyGitlab",
-      "prepublishOnlyNpm": "./npm_publish_switch.sh && rm .npmrc && echo 'registry:https://registry.npmjs.org/' > .npmrc && cat .npmrc && cat package.json && npm run build",
+      "prepublishOnlyNpm": "rm .npmrc && echo 'registry:https://registry.npmjs.org/' > .npmrc && cat .npmrc && cat package.json && npm run build",
       "prepublishOnlyGitlab": "npm run build",
       "postpublish": "npm run clean",
       "test": "echo \"Error: no test specified\" && exit 1",
