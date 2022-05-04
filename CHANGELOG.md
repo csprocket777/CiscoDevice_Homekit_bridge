@@ -1,3 +1,10 @@
+### [1.0.9](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.8...v1.0.9) (2022-05-04)
+
+
+### Bug Fixes
+
+* **publishing:** Move shell scripting into package.json ([4f0b61d](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/4f0b61d057f1fb78fc59e24fb438083d548f2cf5))
+
 ### [1.0.8](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.7...v1.0.8) (2022-05-04)
 
 
