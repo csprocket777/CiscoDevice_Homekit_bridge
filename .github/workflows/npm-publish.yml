@@ -13,6 +13,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Run package.json value replacement script
+        run: ./npm_publish_switch.sh
+        shell: bash
       - run: npm ci
 
   publish-npm:
