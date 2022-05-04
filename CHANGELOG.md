@@ -1,3 +1,11 @@
+### [1.0.4](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.3...v1.0.4) (2022-05-04)
+
+
+### Bug Fixes
+
+* **publishing:** correct package.json errors ([0d3ba52](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/0d3ba52756af4eb3c819e0123138232afbb83375))
+* **publishing:** create a variable replacement script to support npm publishing and include in workflow ([5fbf6f6](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/5fbf6f6ab9c0279982be98fe1fed4792850c7747))
+
 ### [1.0.3](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.2...v1.0.3) (2022-05-04)
 
 
