@@ -11,7 +11,9 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "rimraf ./dist && tsc",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "if-env PUBLISH_DEST=npmjs && npm run prepublishOnlyNpm || npm run prepublishOnlyGitlab",
+    "prepublishOnlyNpm": "./npm_publish_switch.sh && rm .npmrc && echo 'registry:https://registry.npmjs.org/' > .npmrc && npm run build",
+    "prepublishOnlyGitlab": "npm run build",
     "postpublish": "npm run clean",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc && concurrently \"tsc -w\" \"nodemon dist/index.js\"",
@@ -57,6 +59,7 @@
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "conventional-changelog-conventionalcommits": "^4.6.0",
+    "if-env": "^1.0.4",
     "jsxapi": "^5.1.1",
     "semantic-release": "^19.0.2"
   }

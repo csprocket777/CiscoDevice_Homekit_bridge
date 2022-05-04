@@ -25,10 +25,6 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - name: Run package.json value replacement script
-        run: ./npm_publish_switch.sh
-        shell: bash
-      - run: rm .npmrc && echo "registry:https://registry.npmjs.org/" > .npmrc
-      - run: npm publish
+      - run: PUBLISH_DEST=npmjs npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
