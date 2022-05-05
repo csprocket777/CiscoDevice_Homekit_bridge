@@ -1,3 +1,10 @@
+### [1.0.18](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.17...v1.0.18) (2022-05-05)
+
+
+### Bug Fixes
+
+* **github-ci:** Correct the github action workflow ([76cbe42](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/76cbe421ab0906756bf7622b7828a558c71f70cc))
+
 ### [1.0.17](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.16...v1.0.17) (2022-05-05)
 
 
