@@ -1,3 +1,32 @@
+### [1.0.15](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.14...v1.0.15) (2022-05-05)
+
+
+### Bug Fixes
+
+* **ci:** additional debugging tweaks ([6ab58e7](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/6ab58e72a2d4bb52050f16cf07c917e9a454cac0))
+
+### [1.0.14](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.13...v1.0.14) (2022-05-05)
+
+
+### Bug Fixes
+
+* **ci:** ensure the github push stage is dependent on the build stage to get the dist directory ([0727071](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/07270715d8b9f54059e506c16101efb0950ecdc8))
+
+### [1.0.13](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.12...v1.0.13) (2022-05-05)
+
+
+### Bug Fixes
+
+* **ci:** run npm_publish_switch.sh ([a2072da](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/a2072dacab67cafbbb09ae98598ef532206d1067))
+
+### [1.0.12](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.11...v1.0.12) (2022-05-05)
+
+
+### Bug Fixes
+
+* **CI:** Include a `script` section in the `gitpush` step ([f88c2b3](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/f88c2b363d13c2ade0522aff36e46786045acbf9))
+* **publishing:** change from push mirroring to CI git push step strategy ([e1dcdb4](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/e1dcdb4cc94b98fd21fd87dd80349f1585444f80))
+
 ### [1.0.11](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.10...v1.0.11) (2022-05-04)
 
 
