@@ -1,11 +1,12 @@
 #!/bin/bash
 
 filename="package.json"
-SEDOPTION=
+SEDOPTION="-i"
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "HERE";
   SEDOPTION="-i ''"
 fi
+echo $SEDOPTION
 # if [[ "$OSTYPE" == "darwin"* ]]; then 
 #     SEDOPTION='-i \x27\x27'; 
 # else 

@@ -1,10 +1,10 @@
 {
-    "name": "@collaboration_device_macros/homebridge-cisco-collaboration-devices",
-    "version": "1.0.19",
+    "name": "homebridge-cisco-collaboration-devices",
+    "version": "1.0.20",
     "description": "A device bridge for Apple's Homekit framework (via Homebridge.io) supporting Cisco Collaboration devices.",
     "main": "dist/index.js",
     "publishConfig": {
-        "@collaboration_device_macros:registry": "https://hr-tm-cms-git.cisco.com/api/v4/projects/122/packages/npm/",
+        "registry": "https://registry.npmjs.org/",
         "access": "public"
     },
     "homepage": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge",
@@ -38,7 +38,7 @@
         "dist/",
         "config.schema.json"
     ],
-    "repository": "https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge.git",
+    "repository": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge.git",
     "bugs": {
         "url": "https://github.com/csprocket777/CiscoDevice_Homekit_bridge/issues"
     },
