@@ -6,28 +6,6 @@ name: homebridge-cisco-collaboration-devices Package
 on: push
 
 jobs:
-  version:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: ./npmjs_publish_filemove.sh
-      - run: cd ./npmjs_publish && pwd && ls && npm install && npm run semantic-release
-
-  build:
-    needs: version
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: cd ./npmjs_publish && pwd && npm run build
-
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
