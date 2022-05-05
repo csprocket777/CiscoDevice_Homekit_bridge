@@ -1,3 +1,10 @@
+### [1.0.21](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.20...v1.0.21) (2022-05-05)
+
+
+### Bug Fixes
+
+* **github-ci:** ensure we’re not just having sed output to stdin ([668b341](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/668b3417bc2a00be2d98343b6c679ed14fe7de04))
+
 ### [1.0.20](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.19...v1.0.20) (2022-05-05)
 
 
