@@ -14,6 +14,8 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
+      - run: ./npmjs_publish_filemove.sh
+      - run: cd npmjs_publish
       - run: npm install
       - run: npm run semantic-release
 
@@ -26,8 +28,8 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
+      - run: cd npmjs_publish
       - run: npm run build
-      - run: ./npmjs_publish_filemove.sh
 
   publish-npm:
     needs: build
