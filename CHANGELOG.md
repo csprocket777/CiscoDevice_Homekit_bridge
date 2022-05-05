@@ -1,3 +1,10 @@
+### [1.0.16](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.15...v1.0.16) (2022-05-05)
+
+
+### Bug Fixes
+
+* **ci:** ensure the dist directory is copied ([a205e49](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/a205e490f847d8c47998b8db62c19fdcc5bf7695))
+
 ### [1.0.15](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.14...v1.0.15) (2022-05-05)
 
 
