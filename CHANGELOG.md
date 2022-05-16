@@ -1,3 +1,10 @@
+### [1.0.24](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.23...v1.0.24) (2022-05-12)
+
+
+### Bug Fixes
+
+* **general:** Move value retrieval from a static `.get()` to a subscription method. This fixes the motion, humidity and temp sensors not being responsive enough ([46d4ae9](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/46d4ae9983c05e08bd6657c8cb9bc1b93a918d8e))
+
 ### [1.0.23](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.22...v1.0.23) (2022-05-10)
 
 
