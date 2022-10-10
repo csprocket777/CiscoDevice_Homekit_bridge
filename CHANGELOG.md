@@ -1,3 +1,11 @@
+### [1.0.25](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.24...v1.0.25) (2022-10-10)
+
+
+### Bug Fixes
+
+* **dependencies:** package bump `ssh2@1.11.0` ([ae2feef](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/ae2feef9157712127d1398a8d71a18114445c8a4))
+* **motion:** Further tweaks to improve the motion detection ([a852462](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/commit/a852462b2d24c21fa01c4be750b51f36ecf9e653))
+
 ### [1.0.24](https://hr-tm-cms-git.cisco.com/collaboration_device_macros/ciscodevice_homekit_bridge/compare/v1.0.23...v1.0.24) (2022-05-12)
 
 
